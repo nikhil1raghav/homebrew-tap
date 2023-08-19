@@ -5,20 +5,20 @@
 class KindleSend < Formula
   desc ""
   homepage ""
-  version "2.0.0-rc-1"
+  version "2.0.0-rc-2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-1/kindle-send_2.0.0-rc-1_darwin_arm64.tar.gz"
-      sha256 "5d62bb30b854f10055b195743b7977bb8f8953def9268132c727d1762b982941"
+    if Hardware::CPU.intel?
+      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-2/kindle-send_2.0.0-rc-2_darwin_amd64.tar.gz"
+      sha256 "340da38b9a53a6649dec6f7f833c7f12d256c5af7275c7bccead3b54dcf4471d"
 
       def install
         bin.install "kindle-send"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-1/kindle-send_2.0.0-rc-1_darwin_amd64.tar.gz"
-      sha256 "d2cda11795b6069eee552e7de83263fd6ec536034c854d365a4faad356ee1af0"
+    if Hardware::CPU.arm?
+      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-2/kindle-send_2.0.0-rc-2_darwin_arm64.tar.gz"
+      sha256 "fc7fed0ea5c376ac68ec25a6942056b3f485d62cbe03284cc178c4b84ef8848e"
 
       def install
         bin.install "kindle-send"
@@ -28,16 +28,16 @@ class KindleSend < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-1/kindle-send_2.0.0-rc-1_linux_arm64.tar.gz"
-      sha256 "41d4dd0238d9ff8c9ea523bb4f7f66b561b11174f484306b210a900955dbcadf"
+      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-2/kindle-send_2.0.0-rc-2_linux_arm64.tar.gz"
+      sha256 "0e0272fa338202174b55959d38af3907222419e7ccb8211e35fb37cee6580479"
 
       def install
         bin.install "kindle-send"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-1/kindle-send_2.0.0-rc-1_linux_amd64.tar.gz"
-      sha256 "4cd67a62c0df014c23e13e84e1bb8fa378876f5b3828330488b60d87543abf14"
+      url "https://github.com/nikhil1raghav/kindle-send/releases/download/v2.0.0-rc-2/kindle-send_2.0.0-rc-2_linux_amd64.tar.gz"
+      sha256 "c3a3053b9812fcdc3fbce560e3c88da14651831cae5714eab36a07ff75e0e2ba"
 
       def install
         bin.install "kindle-send"
